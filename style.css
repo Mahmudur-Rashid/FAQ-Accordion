@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Work sans;
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work sans", sans-serif;
+}
+
+.accordion {
+  background-color: #eee;
+  max-width: 400px;
+  padding: 1em;
+  margin: 2em;
+  margin: 2em auto;
+  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+.background-image-desktop,
+.background-image-mobile {
+  width: 100%;
+}
+
+.background-image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 575px) {
+  .accordion {
+    max-width: 350px;
+  }
+  .background-image-desktop {
+    display: none;
+  }
+  .background-image-mobile {
+    display: block;
+  }
+}
+
+.accordion-heading {
+  display: flex;
+  margin: 1em 0;
+}
+
+.accordion-heading h1 {
+  margin: 0 0.5em;
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  border: none;
+  font-weight: 600;
+  outline: none;
+  background: none;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.active,
+.accordion-header:hover {
+  color: hsl(292, 16%, 49%);
+}
+
+.accordion-panel {
+  padding: 0 18px;
+  color: hsl(292, 16%, 49%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s all ease-out;
+  -webkit-transition: 0.5s all ease-out;
+  -moz-transition: 0.5s all ease-out;
+  -ms-transition: 0.5s all ease-out;
+  -o-transition: 0.5s all ease-out;
+}
+
+.accordion-header::before {
+  content: url(./assets/images/icon-plus.svg);
+  position: absolute;
+  right: 5px;
+}
+
+.accordion-header.active::before {
+  transition: 2s all ease;
+  content: url(./assets/images/icon-minus.svg);
+  -webkit-transition: 2s all ease;
+  -moz-transition: 2s all ease;
+  -ms-transition: 2s all ease;
+  -o-transition: 2s all ease;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
